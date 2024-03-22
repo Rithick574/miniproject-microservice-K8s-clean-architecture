@@ -12,7 +12,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 
-app.use("/auth", proxy("http://localhost:8001", {changeOrigin: true}));
+app.use("/auth", proxy("http://localhost:8001/"));
+// app.use("/admin",)
 
 
 app.listen(PORT,()=>{
