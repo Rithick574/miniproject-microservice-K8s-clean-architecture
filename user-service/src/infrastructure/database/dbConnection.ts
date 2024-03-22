@@ -14,7 +14,17 @@ export default async()=>{
 
         await mongoose.connect(mongoUrl.trim());
 
-        console.log(`🍃🍃🍃🍃🍃🍃 Database connected with MongoDB 🍃🍃🍃🍃🍃🍃`);
+        console.log(`
+                           _   _      _    
+                          | | | |    | |   
+                          | |_| | ___| | __
+                          |  _  |/ _ \\ |/ /
+                          | | | |  __/   < 
+                          |_| |_|\\___|_|\\_\\
+       
+        🍃🍃🍃🍃🍃🍃 MongoDB connected successfully!🍃🍃🍃🍃🍃🍃
+      `);
+      
     } catch (error:any) {
         console.error(`🍁🍁🍁🍁🍁 Database Connection failed 🍁🍁🍁🍁🍁`);
         console.error(error.message);

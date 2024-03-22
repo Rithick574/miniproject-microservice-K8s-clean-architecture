@@ -1,6 +1,6 @@
 import { Schema, model, Document } from "mongoose";
 import { UserEntity } from "../../../../domain/entities";
-
+import mongoose from "mongoose";
 
 const userSchema = new Schema({
   username: {
@@ -29,4 +29,4 @@ const userSchema = new Schema({
   timestamps: true
 });
 
-export const User = model<UserEntity>("logincredentials", userSchema);
+export const User = mongoose.model<UserEntity>("logincredentials", userSchema);
