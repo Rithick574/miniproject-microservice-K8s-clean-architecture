@@ -1,4 +1,3 @@
-import { UserEntity } from "../../domain/entities";
 import { UserLoginEntity } from "../../domain/entities/userLoginEntity";
 import { IDependencies } from "../interfaces/IDependencies";
 

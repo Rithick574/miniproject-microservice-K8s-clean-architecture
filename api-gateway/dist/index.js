@@ -13,7 +13,7 @@ app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
 app.use("/auth", (0, express_http_proxy_1.default)("http://localhost:8001/"));
-// app.use("/admin",)
+app.use("/admin", (0, express_http_proxy_1.default)("http://localhost:8002/"));
 app.listen(PORT, () => {
     console.log("Gateway is Listening to Port 8000");
 });

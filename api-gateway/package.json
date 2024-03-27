@@ -26,6 +26,6 @@
     "build": "tsc --watch",
     "start:dev":" concurrently --kill-others-on-fail \"npm run build\" \"npm run start\""
   },
-  "author": "",
+  "author": "rithick",
   "license": "ISC"
 }

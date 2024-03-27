@@ -8,7 +8,7 @@
     "dev": "nodemon src/index.ts",
     "start": "nodemon dist/index.js",
     "build": "tsc --watch",
-    "start:dev": " concurrently --kill-others-on-fail \"npm run build\" \"npm run start\""
+    "start:dev": "concurrently --kill-others-on-fail \"npm run build\" \"npm run start\""
   },
   "author": "",
   "license": "ISC",

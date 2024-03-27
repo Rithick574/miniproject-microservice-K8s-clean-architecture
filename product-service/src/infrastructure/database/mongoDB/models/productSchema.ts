@@ -1,0 +1,19 @@
+import mongoose, { Schema, Document } from "mongoose";
+import { Product } from "../../../../domain/entities/Product"; 
+
+const productSchema: Schema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+});
+
+export const product = mongoose.model<Product & Document>("Product",productSchema)
