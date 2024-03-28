@@ -25,8 +25,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dependencies = void 0;
 const repositories = __importStar(require("../infrastructure/database/mongoDB/repositories"));
-const usecases = __importStar(require("../application/useCases"));
+const useCases = __importStar(require("../application/useCases"));
 exports.dependencies = {
     repositories,
-    usecases
+    useCases
 };

@@ -12,6 +12,7 @@ app.use(cookieParser());
 
 app.use("/auth",proxy("http://localhost:8001/"));
 app.use("/admin",proxy("http://localhost:8002/"));
+app.use('/product',proxy("http://localhost:8003/"));
 
 app.listen(PORT, () => {
   console.log("Gateway is Listening to Port 8000");

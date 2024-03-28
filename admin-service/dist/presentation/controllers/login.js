@@ -16,7 +16,7 @@ exports.loginController = void 0;
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const loginController = (dependencies) => {
     console.log(dependencies, "-------------");
-    const { usecases: { loginAdminUseCase } } = dependencies;
+    const { useCases: { loginAdminUseCase } } = dependencies;
     const loginAdmin = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         try {
             const adminCredentials = req.body;

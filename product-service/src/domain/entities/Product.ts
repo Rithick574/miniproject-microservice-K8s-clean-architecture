@@ -1,6 +1,9 @@
+import { Types } from "mongoose";
+
 export interface Product{
-    _id?:string;
+    _id?:Types.ObjectId;
     name:string;
     description:string;
     price:number;
+    stock:number;
 }

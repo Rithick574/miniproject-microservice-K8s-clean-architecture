@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken"
 
 export const loginController =(dependencies:IDependencies)=>{
     console.log(dependencies,"-------------");
-    const {usecases:{loginAdminUseCase}} = dependencies;
+    const {useCases:{loginAdminUseCase}} = dependencies;
     
     const loginAdmin = async(req:Request,res:Response,next:NextFunction)=>{
         try {
