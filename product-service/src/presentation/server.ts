@@ -1,6 +1,8 @@
 import express,{Response,Request,NextFunction,Application} from "express"
 import dotenv from "dotenv"
 import cookieParser from "cookie-parser"
+import { dependencies } from "../config/dependencies";
+import {addProduct} from "..//infrastructure/routes/addProduct"
 
 
 dotenv.config();
@@ -11,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 
-app.use("/")
+app.use(addProduct(dependencies))
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     console.error(err);
