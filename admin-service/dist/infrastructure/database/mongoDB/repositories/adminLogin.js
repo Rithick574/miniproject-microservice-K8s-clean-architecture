@@ -21,7 +21,16 @@ const login = (data) => __awaiter(void 0, void 0, void 0, function* () {
         if (!data.email || !data.password) {
             throw new Error("Email and password are required");
         }
-        const admin = yield loginSchema_1.Admin.findOne({ email: data.email });
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            throw new Error("Invalid email format");
+        }
+        if (data.password.length < 8) {
+            throw new Error("Password must be at least 8 characters long");
+        }
+        const admin = yield loginSchema_1.Admin.findOne({
+            email: data.email,
+        });
         console.log("🚀 ~ file: adminLogin.ts:8 ~ adminLogin ~ admin:", admin);
         if (admin) {
             const passwordMatch = yield bcrypt_1.default.compare(data.password, admin.password);

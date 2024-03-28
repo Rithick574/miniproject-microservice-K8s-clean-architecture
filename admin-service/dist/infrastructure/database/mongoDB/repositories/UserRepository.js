@@ -21,6 +21,16 @@ const addUser = (data) => __awaiter(void 0, void 0, void 0, function* () {
         if (!data.email || !data.password || !data.username) {
             throw new Error("Username, Email, and Password are required");
         }
+        if (data.username.trim() === "") {
+            throw new Error("Username cannot be empty");
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            throw new Error("Invalid email format");
+        }
+        if (data.password.length < 8) {
+            throw new Error("Password must be at least 8 characters long");
+        }
         const existingUser = yield loginSchema_1.Admin.findOne({ email: data.email });
         if (existingUser) {
             throw new Error("Email already exists");
