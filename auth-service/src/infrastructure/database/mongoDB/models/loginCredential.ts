@@ -29,4 +29,4 @@ const userSchema = new Schema({
   timestamps: true
 });
 
-export const User = mongoose.model<UserEntity>("logincredentials", userSchema);
+export const User = mongoose.model<UserEntity>("users", userSchema);

@@ -6,7 +6,7 @@ enum Role{
 }
 
 export interface UserEntity{
-    _id?: ObjectId | string;
+    _id: ObjectId ;
     username:string;
     email:string;
     password:string;
