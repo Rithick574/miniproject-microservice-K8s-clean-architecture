@@ -18,7 +18,7 @@ import { runConsumer } from "./infrastructure/kafka/consumer";
     process.exit(1);
   } finally {
     process.on("SIGINT", async () => {
-      console.log("\n\nServer is shutting down...");
+      console.log("\n\nServer is shutting down....");
       process.exit(0);
     });
   }
