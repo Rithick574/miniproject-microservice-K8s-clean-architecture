@@ -3,7 +3,6 @@ import { IDependencies } from "../../application/interfaces/IDependencies";
 import { hashPassword } from "../../utils/bcrypt/hashPassword";
 import generateToken from "../../utils/jwt/generateToken";
 import { userCreatedProducer } from "../../infrastructure/kafka/producers/userCreatedProducers";
-import { UserEntity } from "../../domain/entities";
 
 export const signupController = (dependencies: IDependencies) => {
   const {

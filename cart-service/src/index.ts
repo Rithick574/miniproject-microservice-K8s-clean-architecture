@@ -1,13 +1,12 @@
 import dbConnection from "./infrastructure/database/dbConnection";
 import server from "./presentation/server";
-// import { runConsumer } from "./infrastructure/kafka/consumer";
+import { runConsumer } from "./infrastructure/kafka/consumer";
 
 (async () => {
   try {
     server;
 
-    // await Promise.all([dbConnection(), runConsumer()])
-    await Promise.all([dbConnection()])
+    await Promise.all([dbConnection(), runConsumer()])
       .then(() => console.log("kafka consumer is runnnig"))
       .catch((error) => {
         console.error(`Error while initializing Kafka consumer: ${error}`);
