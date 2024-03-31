@@ -1,0 +1,13 @@
+image: docker:latest
+
+stages:
+  - build
+
+build_and_push_image:
+  stage: build
+  script:
+    - docker login -u "$USERNAME" -p "$PASSWORD"
+    - docker build -t rithickramanthali/ecommerce-api-service:latest ./api-gateway/
+    - docker push rithickramanthali/ecommerce-api-service:latest
+  only:
+    - main
